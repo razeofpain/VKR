@@ -14,7 +14,7 @@
 - Графический интерфейс: Tkinter
 - База данных: SQLite
 - Библиотеки: matplotlib
-- Среда разработки: PyCharm / Visual Studio Code
+- Среда разработки: PyCharm 
 
 ## Установка зависимостей
 
@@ -28,12 +28,12 @@ pip install matplotlib
 
 1. Клонировать репозиторий:
 ```
-git clone https://github.com/ваш_логин/имя_репозитория.git
+git clone https://github.com/razeofpain/VKR.git
 ```
 
 2. Перейти в папку проекта:
 ```
-cd имя_репозитория
+cd VKR
 ```
 
 3. Запустить основной файл:
@@ -60,13 +60,15 @@ python main.py
 ## Структура проекта
 
 ```
-├── main.py                  # Основной файл запуска
-├── EntryWindows.py          # Окно авторизации
-├── MainWindow.py            # Главное окно приложения
-├── Sql.py                   # Работа с SQLite
-├── constants.py             # Константы
-├── README.md
-└── requirements.txt         # При наличии
+├── main.py          # Основной файл запуска приложения
+├── EntryWindows.py  # Окно авторизации, регистрации и входа
+├── MainWindow.py    # Главное окно для работы с финансами
+├── Sql.py           # Класс для работы с базой данных SQLite
+├── constants.py     # Глобальные константы проекта
+├── README.md        # Описание проекта, инструкция по запуску
+├── requirements.txt # Список зависимостей для установки
+├── ER_Diagram.png   # ER-диаграмма структуры базы данных
+├── UML.png          # Полная UML-диаграмма проекта
 ```
 
 ## Примечание
