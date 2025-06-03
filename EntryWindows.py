@@ -228,9 +228,9 @@ class EntryWindow(Toplevel):
             else:
                 if os.path.exists("user_data.txt"):
                     os.remove("user_data.txt")
-            self.destroy()               # Закрываем окно входа
-            self.master.destroy()        # <-- Закрываем MenuWindow, чтобы не висел
-            MainWindow(login)            # Открываем главное окно приложения
+            self.destroy()               
+            self.master.destroy()       
+            MainWindow(login)            
         else:
             messagebox.showinfo(title="Ошибка", message="Неверный логин или пароль!")
 
