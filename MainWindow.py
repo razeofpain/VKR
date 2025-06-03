@@ -35,7 +35,6 @@ class MainWindow(Tk):
         header = Label(self, text="Учет финансов", font=("Segoe UI", 20, "bold"), bg="#f4f4f4")
         header.pack(pady=(20, 5))
 
-        # --- Диаграммы и итоги ---
         self.diagram_frame = Frame(self, bg="#f4f4f4")
         self.diagram_frame.pack(pady=(5, 10), fill="both")
 
@@ -58,7 +57,6 @@ class MainWindow(Tk):
         self.balance_lbl = Label(self, text=f"Текущий баланс: {self.balance} руб.", font=("Segoe UI", 16, "bold"), bg="#f4f4f4")
         self.balance_lbl.pack(pady=(0, 20))
 
-        # --- Форма ввода ---
         form_frame = ttk.Frame(self)
         form_frame.pack(pady=10, padx=20, fill="x")
 
@@ -173,7 +171,6 @@ class MainWindow(Tk):
 
         old_values = self.table.item(selected[0])['values']
 
-        # --- Новое окно, центр, увеличенный размер ---
         edit_width, edit_height = 600, 380
         self.update_idletasks()
         screen_width = self.winfo_screenwidth()
@@ -310,7 +307,6 @@ class MainWindow(Tk):
             else:
                 expenses[category] = expenses.get(category, 0) + sm
 
-        # --- Диаграмма расходов ---
         fig1 = Figure(figsize=(5.2, 3.5), dpi=100)
         ax1 = fig1.add_subplot(111)
         ax1.set_title("Диаграмма учета расходов")
@@ -329,7 +325,6 @@ class MainWindow(Tk):
         self.expense_sum_lbl.config(
             text=f"Итого расходов: {total_expense} руб." if total_expense > 0 else "")
 
-        # --- Диаграмма доходов ---
         fig2 = Figure(figsize=(5.2, 3.5), dpi=100)
         ax2 = fig2.add_subplot(111)
         ax2.set_title("Диаграмма учета доходов")
